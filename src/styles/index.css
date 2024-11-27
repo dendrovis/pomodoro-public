@@ -1,0 +1,47 @@
+@import url('./reset.css');
+@import url('./layouts/index.css');
+
+:root {
+  --primary-color: #fef7f7;
+  --secondary-color: #ff4949;
+  --secondary-color-alt: #37d2d2;
+  --tertiary-color: #ccc;
+  --tertiary-color-dark: #545454;
+  --tertiary-color-dark-translucent: #54545499;
+  --max-width: 800px;
+}
+
+html {
+  /* adjust default font-size to 10px = 1rem for easier mental calculation */
+  font-size: 62.5%;
+}
+
+body {
+  /* set default back to 16px for those element(s) do not use rem as relative sizing */
+  font-size: 1.6rem;
+  color: var(--tertiary-color-dark, grey);
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  background-color: var(--tertiary-color-dark, black);
+
+  /* font-size change influence the sizing of all inherited elements */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.body-dark {
+  background-color: black;
+}
+
+main {
+  width: 100vw;
+  max-width: var(--max-width);
+  height: 100%;
+  min-height: 100vh;
+  background-color: var(--primary-color, white);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.main-dark {
+  background-color: var(--tertiary-color-dark, grey);
+}

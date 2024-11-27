@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`when enter id > should render if id is distinct 1`] = `"<dialog id="test" class="_container_36b8ff"><div></div></dialog>"`;
+
+exports[`when given content > should render whatever is given to the content 1`] = `"<dialog id="test" class="_container_36b8ff"><div><div>test</div></div></dialog>"`;
+
+exports[`when given targetElementId > should render if targetElementId exist 1`] = `"<dialog id="test" class="_container_36b8ff"><div></div></dialog>"`;
+
+exports[`when isOpen is set > should display the content if true 1`] = `"<dialog id="test" class="_container_36b8ff" open=""><div></div></dialog>"`;
+
+exports[`when isOpen is set > should not display the content if false 1`] = `"<dialog id="test" class="_container_36b8ff"><div></div></dialog>"`;
+
+exports[`when toggle is set > should display the content if toggle when isOpen is false 1`] = `"<dialog id="test" class="_container_36b8ff"><div></div></dialog>"`;
+
+exports[`when toggle is set > should not display the content if toggle when isOpen is true 1`] = `"<dialog id="test" class="_container_36b8ff" open=""><div></div></dialog>"`;

@@ -1,0 +1,6 @@
+.container {
+  background-color: var(--tertiary-color-dark-translucent, grey);
+  width: 100vw;
+  max-width: calc(var(--max-width));
+  min-height: 100vh;
+}

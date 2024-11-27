@@ -1,0 +1,68 @@
+# CICD for production pipeline
+name: release pipeline
+
+run-name: ${{ github.actor }} released
+
+on:
+  push:
+    branches:
+      - 'release/v[0-9].[0-9].[0-9]'
+
+  # Allow manual trigger from github actions to test this pipeline
+  workflow_dispatch:
+
+jobs:
+  run:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      # Install dependencies packages and cli
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Setup Node  
+        uses: actions/setup-node@v4 
+        with:
+          node-version: 20
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+      - name: Install Dependencies
+        run: pnpm install
+      # Checks
+      - name: Sanity Check
+        run: | 
+          echo running sanity test...
+          ls -l
+      # Test
+      - name: Linter Test
+        run: pnpm run test:linter
+      - name: Unit Test
+        run: pnpm run test:unit
+      # Build and Test
+      - name: E2E Test
+        uses: cypress-io/github-action@v6
+        with:
+          config-file: cypress.prod.config.ts
+          build: pnpm run build
+          start: pnpm run preview
+          browser: chrome
+      # Test Reports
+      - name: E2E coverage results
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-test-results
+          path: cypress/output
+          retention-days: 3
+      # Deployment
+      - name: Deploy Live
+        if: ${{ github.event_name != 'workflow_dispatch' }}
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_POMODORO_EPOCH }}'
+          channelId: live
+          projectId: pomodoro-epoch
+
+

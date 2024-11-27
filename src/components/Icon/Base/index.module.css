@@ -1,0 +1,28 @@
+.icon-base {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.5);
+  }
+
+  & > svg > path {
+    cursor: pointer;
+    fill: var(--tertiary-color-dark, black);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.icon-base-closed {
+  & > svg > path {
+    cursor: pointer;
+    fill: var(--secondary-color, red);
+  }
+}
+
+.icon-base-dark {
+  & > svg > path {
+    cursor: pointer;
+    fill: var(--primary-color, white);
+  }
+}

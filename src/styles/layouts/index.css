@@ -1,0 +1,80 @@
+.container-settings-theme,
+.container-timer,
+.container-settings-cluster,
+.container-overlay > div {
+  padding: 1rem;
+}
+
+.container-settings-theme {
+  display: flex;
+  justify-content: flex-starts;
+  align-items: center;
+}
+
+.container-timer,
+.container-animated-image,
+.container-settings-cluster {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container-timer-watch {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-overlay {
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
+
+  /* allow click through element behind */
+  pointer-events: none;
+
+  /* pseudo container to stack on parent element */
+  & > div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+
+  & > div > * {
+    /* allow component to be click-able */
+    pointer-events: initial;
+  }
+}
+
+.container-modal-help,
+.container-modal-info {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.container-modal-info {
+  height: 100vh;
+}
+
+.container-load {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--tertiary-color-dark, black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+}
+
+.container-load-disabled {
+  display: none;
+}

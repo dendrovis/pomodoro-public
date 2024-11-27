@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`when given elementTargetID > should render if element exist 1`] = `"<div id="motion-image-test-4" class="_container_446280"><img src="/src/assets/images/animated/idle.webp" alt="idle.webp"></div>"`;
+
+exports[`when given id > should render if distinct id 1`] = `"<div id="motion-image-test" class="_container_446280"><img src="/src/assets/images/animated/idle.webp" alt="idle.webp"></div>"`;
+
+exports[`when setAnimate > should render idle when set idle as type 1`] = `"<div id="motion-image-test-5" class="_container_446280"><img src="/src/assets/images/animated/idle.webp" alt="idle.webp"></div>"`;
+
+exports[`when setAnimate > should render idle when set run as type 1`] = `"<div id="motion-image-test-6" class="_container_446280"><img src="/src/assets/images/animated/run.webp" alt="run.webp"></div>"`;

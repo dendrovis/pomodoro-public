@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A pomodoro technique application to train your discipline in productivity">
+    <meta name= “robots” content="index,follow"/>
+    <meta name="keywords" content="pomodoro, productivity, mental, health, discipline"/>
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://pomodoro.dendrovis.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pomodoro">
+    <meta property="og:description" content="A pomodoro technique application to train your discipline in productivity">
+    <meta property="og:image" content="/assets/images/logo_meta.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="dendrovis.com">
+    <meta property="twitter:url" content="https://pomodoro.dendrovis.com">
+    <meta name="twitter:title" content="Pomodoro">
+    <meta name="twitter:description" content="A pomodoro technique application to train your discipline in productivity">
+    <meta name="twitter:image" content="/assets/images/logo_meta.png">
+    
+    <title>Pomodoro</title>
+  </head>
+  <body id="app">
+    <main id="main">
+      <div class="container-settings-theme"></div>
+      <div class="container-animated-image"></div>
+      <div class="container-timer">
+        <div class="container-timer-watch"></div>
+        <div class="container-timer-cycle-input"></div>
+      </div>
+      <div class="container-settings-cluster">
+        <div class="container-settings-alarm"></div>
+        <div class="container-settings-cache"></div>
+        <div class="container-locker"></div>
+      </div>
+      <div class="container-overlay"><div class="container-content"></div></div>
+      <div class="container-modal-help"></div>
+      <div class="container-modal-info"></div>
+    </main>
+    <div class="container-load"></div>
+    <audio id="alarm-break" preload="auto" src="/assets/audio/alarm_break.mp3"></audio>
+    <audio id="alarm-productivity" preload="auto" src="/assets/audio/alarm_productivity.mp3"></audio>
+    <script type="module" src="./src/index.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+export type Timer = {
+  getValue: GetValue;
+  getCycleCount: GetCycleCount;
+  getCurrentCycle: GetCurrentCycle;
+  getProductivityValue: GetProductivityValue;
+  getBreakValue: GetBreakValue;
+  getMode: GetMode;
+  setProductivityValue: SetProductivityValue;
+  setBreakValue: SetBreakValue;
+  setModeValue: SetModeValue;
+  setCycleCount: SetCycleCount;
+  start: Start;
+  pause: Pause;
+  stop: Stop;
+  setOnTick: SetOnTick;
+  setOnDone: SetOnDone;
+  setOnBreak: SetOnBreak;
+  onSave: OnSave;
+};
+
+type Time = { sec: number; min: number };
+
+export type SetOnBreak = (onBreak: OnBreak) => void;
+export type OnBreak = (() => void) | null;
+export type OnSave = () => string | false;
+export type SetCycleCount = (value: number) => void;
+export type GetProductivityValue = () => number;
+export type GetBreakValue = () => number;
+export type SetOnDone = (onDone: OnDone) => void;
+export type OnDone = (() => void) | null;
+export type SetOnTick = (onTick: OnTick) => void;
+export type OnTick = ((time: Time, mode: Mode, currentCycle: number) => void) | null;
+export type Mode = 'break' | 'productivity';
+export type GetValue = () => Time;
+export type GetCycleCount = () => number;
+export type GetMode = () => Mode;
+export type SetProductivityValue = (value: number) => void;
+export type SetBreakValue = (value: number) => void;
+export type SetModeValue = (mode: Mode) => void;
+export type Start = () => void;
+export type Pause = () => void;
+export type Stop = () => void;
+export type States = Time & {
+  cycle: number;
+  totalCycle: number;
+  productivityValue: number;
+  breakValue: number;
+  isRunning: boolean;
+  mode: Mode;
+};
+export type Tick = () => void;
+export type ModeCycle = Array<States['mode']>;
+export type TimeoutID = NodeJS.Timeout | undefined;
+export type GetCurrentCycle = () => number;

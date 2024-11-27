@@ -1,0 +1,185 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`when given custom background image > should render 1`] = `
+"
+    <div id="test-9" class="_container_b68c13">
+      
+      <div id="toggle-test-9" class="_toggle_b68c13 _with-background_b68c13" style="--background-image:url(/src/assets/images/static/light_dark_background.webp)">
+        
+    <div id="toggle-test-9-action" class="_circular-toggle_b68c13" >
+      
+    </div>
+      </div>
+    </div>"
+`;
+
+exports[`when given custom toggle on and off color > should render 1`] = `
+"
+    <div id="test-10" class="_container_b68c13">
+      
+      <div id="toggle-test-10" class="_toggle_b68c13" ">
+        
+    <div id="toggle-test-10-action" class="_circular-toggle_b68c13" style="--background-color:#545454;--background-color-on:#FEF7F7">
+      
+    </div>
+      </div>
+    </div>"
+`;
+
+exports[`when given icons > should not render icon if incomplete 1`] = `
+"
+    <div id="test-2" class="_container_b68c13">
+      
+      <div id="toggle-test-2" class="_toggle_b68c13" ">
+        
+    <div id="toggle-test-2-action" class="_circular-toggle_b68c13" >
+      
+    </div>
+      </div>
+    </div>"
+`;
+
+exports[`when given icons > should render icon if complete 1`] = `
+"
+    <div id="test-3" class="_container_b68c13">
+      
+      <div id="toggle-test-3" class="_toggle_b68c13" ">
+        
+    <div id="toggle-test-3-action" class="_circular-toggle_b68c13" >
+      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.00002 17V15H5.00002V8C5.00002 7.45 5.07086 6.90833 5.21252 6.375C5.35419 5.84167 5.56669 5.33333 5.85002 4.85L7.35003 6.35C7.23336 6.61667 7.14586 6.8875 7.08752 7.1625C7.02919 7.4375 7.00002 7.71667 7.00002 8V15H13.2L0.400024 2.2L1.80002 0.8L20.2 19.2L18.8 20.6L15.15 17H3.00002ZM17 13.15L15 11.15V8C15 6.9 14.6084 5.95833 13.825 5.175C13.0417 4.39167 12.1 4 11 4C10.5667 4 10.15 4.06667 9.75002 4.2C9.35003 4.33333 8.98336 4.53333 8.65003 4.8L7.20003 3.35C7.53336 3.08333 7.89169 2.85 8.27502 2.65C8.65836 2.45 9.06669 2.3 9.50002 2.2V1.5C9.50002 1.08333 9.64586 0.729167 9.93752 0.4375C10.2292 0.145833 10.5834 0 11 0C11.4167 0 11.7709 0.145833 12.0625 0.4375C12.3542 0.729167 12.5 1.08333 12.5 1.5V2.2C13.8334 2.53333 14.9167 3.2375 15.75 4.3125C16.5834 5.3875 17 6.61667 17 8V13.15ZM11 20C10.45 20 9.97919 19.8042 9.58753 19.4125C9.19586 19.0208 9.00002 18.55 9.00002 18H13C13 18.55 12.8042 19.0208 12.4125 19.4125C12.0209 19.8042 11.55 20 11 20Z" fill="#FEF7F7"/>
+</svg>
+
+    </div>
+      </div>
+    </div>"
+`;
+
+exports[`when given id > should render correctly on the test id 1`] = `
+"
+    <div id="test" class="_container_b68c13">
+      
+      <div id="toggle-test" class="_toggle_b68c13" ">
+        
+    <div id="toggle-test-action" class="_circular-toggle_b68c13" >
+      
+    </div>
+      </div>
+    </div>"
+`;
+
+exports[`when given label > should render the label out 1`] = `
+"
+    <div id="test-4" class="_container_b68c13">
+      <div id="toggle-test-4-label" class="_label_b68c13">sample label</div>
+      <div id="toggle-test-4" class="_toggle_b68c13" ">
+        
+    <div id="toggle-test-4-action" class="_circular-toggle_b68c13" >
+      
+    </div>
+      </div>
+    </div>"
+`;
+
+exports[`when given lock value > render locked if true 1`] = `
+"
+    <div id="test-11" class="_container_b68c13">
+      
+      <div id="toggle-test-11" class="_toggle_b68c13 _toggle-lock_b68c13" ">
+        
+    <div id="toggle-test-11-action" class="_circular-toggle_b68c13 _circular-toggle-lock_b68c13" >
+      
+    </div>
+      </div>
+    </div>"
+`;
+
+exports[`when given lock value > render locked if true 2`] = `
+"
+    <div id="test-12" class="_container_b68c13">
+      
+      <div id="toggle-test-12" class="_toggle_b68c13 _toggle-lock_b68c13" "="">
+        
+    <div id="toggle-test-12-action" class="_circular-toggle_b68c13 _circular-toggle-lock_b68c13"><svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 21C1.45 21 0.979167 20.8042 0.5875 20.4125C0.195833 20.0208 0 19.55 0 19V9C0 8.45 0.195833 7.97917 0.5875 7.5875C0.979167 7.19583 1.45 7 2 7H3V5C3 3.61667 3.4875 2.4375 4.4625 1.4625C5.4375 0.4875 6.61667 0 8 0C9.38333 0 10.5625 0.4875 11.5375 1.4625C12.5125 2.4375 13 3.61667 13 5V7H14C14.55 7 15.0208 7.19583 15.4125 7.5875C15.8042 7.97917 16 8.45 16 9V19C16 19.55 15.8042 20.0208 15.4125 20.4125C15.0208 20.8042 14.55 21 14 21H2ZM2 19H14V9H2V19ZM8 16C8.55 16 9.02083 15.8042 9.4125 15.4125C9.80417 15.0208 10 14.55 10 14C10 13.45 9.80417 12.9792 9.4125 12.5875C9.02083 12.1958 8.55 12 8 12C7.45 12 6.97917 12.1958 6.5875 12.5875C6.19583 12.9792 6 13.45 6 14C6 14.55 6.19583 15.0208 6.5875 15.4125C6.97917 15.8042 7.45 16 8 16ZM5 7H11V5C11 4.16667 10.7083 3.45833 10.125 2.875C9.54167 2.29167 8.83333 2 8 2C7.16667 2 6.45833 2.29167 5.875 2.875C5.29167 3.45833 5 4.16667 5 5V7Z" fill="#FEF7F7"></path>
+</svg>
+</div>
+      </div>
+    </div>"
+`;
+
+exports[`when given lock value > render unlock if false 1`] = `
+"
+    <div id="test-13" class="_container_b68c13">
+      
+      <div id="toggle-test-13" class="_toggle_b68c13" ">
+        
+    <div id="toggle-test-13-action" class="_circular-toggle_b68c13" >
+      
+    </div>
+      </div>
+    </div>"
+`;
+
+exports[`when given lock value > render unlock if false 2`] = `
+"
+    <div id="test-14" class="_container_b68c13">
+      
+      <div id="toggle-test-14" class="_toggle_b68c13" "="">
+        
+    <div id="toggle-test-14-action" class="_circular-toggle_b68c13"></div>
+      </div>
+    </div>"
+`;
+
+exports[`when given value > should render off when set is false 1`] = `
+"
+    <div id="test-6" class="_container_b68c13">
+      
+      <div id="toggle-test-6" class="_toggle_b68c13" ">
+        
+    <div id="toggle-test-6-action" class="_circular-toggle_b68c13" >
+      
+    </div>
+      </div>
+    </div>"
+`;
+
+exports[`when given value > should render on when set is true 1`] = `
+"
+    <div id="test-5" class="_container_b68c13">
+      
+      <div id="toggle-test-5" class="_toggle_b68c13 _on_b68c13" ">
+        
+    <div id="toggle-test-5-action" class="_circular-toggle_b68c13 _on_b68c13" >
+      
+    </div>
+      </div>
+    </div>"
+`;
+
+exports[`when user click the component given on state > should render on if the logic return the inverse value 1`] = `
+"
+    <div id="test-8" class="_container_b68c13">
+      
+      <div id="toggle-test-8" class="_toggle_b68c13" "="">
+        
+    <div id="toggle-test-8-action" class="_circular-toggle_b68c13">
+      
+    </div>
+      </div>
+    </div>"
+`;
+
+exports[`when user click the component given on state > should render on if the logic return the same value 1`] = `
+"
+    <div id="test-7" class="_container_b68c13">
+      
+      <div id="toggle-test-7" class="_toggle_b68c13 _on_b68c13" "="">
+        
+    <div id="toggle-test-7-action" class="_circular-toggle_b68c13 _on_b68c13">
+      
+    </div>
+      </div>
+    </div>"
+`;

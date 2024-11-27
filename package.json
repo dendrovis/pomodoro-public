@@ -1,0 +1,62 @@
+{
+  "name": "pomodoro",
+  "version": "1.0.6",
+  "author": "dendrovis team",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dendrovis/pomodoro.git"
+  },
+  "description": "a pomodoro technique application to train your discipline in productivity",
+  "keywords": [
+    "pomodoro",
+    "productivity",
+    "mental",
+    "health",
+    "discipline"
+  ],
+  "license": "MIT",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/dendrovis/pomodoro/issues"
+  },
+  "homepage": "https://github.com/dendrovis/pomodoro#readme",
+  "dependencies": {
+    "chart.js": "^4.4.2",
+    "classnames": "^2.5.1",
+    "modern-normalize": "^2.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "@types/jest": "^29.5.12",
+    "bun-types": "latest",
+    "cypress": "^13.10.0",
+    "eslint": "9.x",
+    "eslint-plugin-n": "^17.7.0",
+    "eslint-plugin-unicorn": "^53.0.0",
+    "globals": "^15.3.0",
+    "jsdom": "^24.0.0",
+    "prettier": "3.3.0",
+    "stylelint": "^16.5.0",
+    "stylelint-config-standard": "^36.0.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.11.0",
+    "vite": "^5.2.11",
+    "vitest": "^1.6.0"
+  },
+  "scripts": {
+    "dev": "bunx --bun vite",
+    "test:sanity": "echo test",
+    "test:linter:eslint": "eslint . --fix-dry-run",
+    "test:linter:prettier": "prettier . --check",
+    "test:linter:stylelint": "npx stylelint \"**/*.{css,scss}\"",
+    "test:linter": "eslint . --fix-dry-run && prettier . --check && npx stylelint \"**/*.{css,scss}\"",
+    "test:unit": "vitest run",
+    "test:unit:watch": "vitest",
+    "test:e2e:local": "cypress open",
+    "test:e2e": "cypress run --browser chrome",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "type": "module"
+}
