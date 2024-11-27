@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: 20
       - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
+        uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
           # temporary fix https://github.com/oven-sh/setup-bun/issues/82
